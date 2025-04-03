@@ -81,6 +81,8 @@ class DemoTextableWidget(OWTextableBaseWidget):
         # that imports new strings into Textable.
         self.createdInputs = list()
 
+        # Soph attempt: comment box
+        self.commentButton = InfoBox(widget=self.controlArea)
         self.infoBox = InfoBox(widget=self.controlArea)
         self.sendButton = SendButton(
             widget=self.controlArea,
@@ -148,6 +150,8 @@ class DemoTextableWidget(OWTextableBaseWidget):
         # Draw send button & Info box...
         self.sendButton.draw()
         self.infoBox.draw()
+        # Soph attempt draw nb of comments box
+        self.commentButton.draw()
         
         # Send data if needed. 
         self.sendButton.settingsChanged()
